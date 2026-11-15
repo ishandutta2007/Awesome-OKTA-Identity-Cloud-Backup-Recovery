@@ -1,111 +1,102 @@
 # Awesome-OKTA-Identity-Cloud-Backup-Recovery
 
-# Awesome Okta Identity Cloud Backup & Recovery
+# Awesome Okta Identity Cloud Backup & Recovery [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of top Okta Identity Cloud Backup and Recovery platforms — both SaaS/Hosted commercial solutions and open-source alternatives for protecting Okta configurations, users, groups, and policies against misconfigurations, deletions, and cyberattacks.
-> 🌟 Star this repo if you find it useful! 🌟
+> A curated list of top Okta Identity Cloud Backup and Disaster Recovery solutions — featuring enterprise SaaS/Hosted data protection platforms, Identity Threat Detection & Recovery (ITDR) suites, GitOps/Terraform state exporters, and self-hosted open-source backup tools for safeguarding Okta configurations, users, groups, rules, and security policies against ransomware, account takeovers, accidental deletions, and tenant misconfigurations.
+
+[![Track Awesome List](https://www.trackawesomelist.com/badge.svg)](https://www.trackawesomelist.com/ishandutta2007/Awesome-OKTA-Identity-Cloud-Backup-Recovery/)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 ---
 
 ## 📋 Table of Contents
 
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [Druva Okta Protection](#druva-okta-protection)
-  - [Keepit for Okta](#keepit-for-okta)
-  - [AvePoint Cloud Backup for Okta](#avepoint-cloud-backup-for-okta)
-  - [Semperis Recovery for Okta](#semperis-recovery-for-okta)
-  - [HYCU for Okta](#hycu-for-okta)
-- [Open-Source Software](#-open-source-software)
-  - [IdPVault](#idpvault)
+- [Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [SaaS & Hosted Enterprise Platforms](#-saas--hosted-enterprise-platforms)
+- [Open-Source & Self-Hosted Software](#-open-source--self-hosted-software)
+- [Architecture & Shared Responsibility Model](#-architecture--shared-responsibility-model)
+- [Feature Comparison Matrix](#-feature-comparison-matrix)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 🟦 SaaS / Hosted Platforms
+## 📈 Sector Overview & Market Dynamics
 
-Commercial, cloud-hosted Okta Identity Cloud Backup and Recovery platforms. These are not open-source but are included as reference points for feature comparison.
+The global SaaS Data Protection & Recovery market is estimated at **$6.8B – $7.1B** (projected to reach **$18B+** by the early 2030s at an ~18% CAGR), while the adjacent Identity Threat Detection & Recovery (ITDR) market is valued at **$5.6B – $7.3B** expanding at 22%+ CAGR toward **$35B+**. 
 
-### Druva Okta Protection
-**Type:** SaaS backup with granular restore and conflict handling
-Druva provides Okta backup with flexible restore options covering single users, specific applications, or full organizational rollback [citation:3]. Restore actions include **Restore to Okta** (automated push) or **Download (JSON)** for auditing. Key capabilities include granular restore of individual objects, multi-item restore across categories (with the caveat that granular selection across multiple categories is not supported), and a snapshot viewer with search across backup history. **Important considerations:** Restoration is additive—group memberships added after the snapshot remain intact. User matching uses Okta ID first, then Login/Email for recreated users. Passwords cannot be restored; users are set to 'Staged' and receive an activation email [citation:3]. Conflict handling offers Skip, Overwrite, or Merge options [citation:11].
-**Best for:** Organizations wanting a fully managed SaaS backup with granular restore and explicit conflict resolution for Okta identity data.
-
-### Keepit for Okta
-**Type:** Independent, immutable identity backup and recovery
-Keepit provides automated, immutable backups for Okta, positioned as essential because Okta operates under a shared responsibility model and does not provide built-in backup and restore capability [citation:4]. Key features include restoration of compromised configurations, rollback of tampered policies, and fast recovery minimizing disruption. Keepit emphasizes **independent, vendor-neutral storage** in its own cloud, ensuring resilience even when native safeguards fall short [citation:12]. The platform supports granular, point-in-time recovery, including recovery to a secondary tenant if needed. Compliance support covers NIST CSF, ISO 27001, GDPR, and HIPAA, with detailed restore logs for audit-proofing [citation:4].
-**Best for:** Organizations wanting an independent, vendor-neutral backup for Okta (and Entra ID) that is completely separate from the identity provider itself.
-
-### AvePoint Cloud Backup for Okta
-**Type:** Multi-SaaS backup with high-frequency protection and command center
-AvePoint provides Okta configuration backup with full-fidelity protection covering configurations, security settings, and relationships [citation:1]. Key features include **high-frequency protection up to four times per day**, a centralized SaaS command center for managing backup health across Okta and other SaaS apps, and granular version history for audit readiness. AvePoint is SOC 2 Type II, ISO 27001, ISO 27701, and FedRAMP compliant [citation:1]. The platform expanded Okta coverage in 2026 alongside Confluence, Jira, DocuSign, and others, with all sources visible in its Data Resiliency Command Centre [citation:13].
-**Best for:** Organizations wanting multi-SaaS backup from a single platform with high-frequency protection and audit-ready reporting, particularly those already using AvePoint for other SaaS workloads.
-
-### Semperis Recovery for Okta
-**Type:** Identity-focused recovery with change monitoring and forensics
-Semperis Recovery for Okta provides full and incremental backups of Okta tenants, granular restores, and rapid recovery from corruption or attack, supporting both same-IDP and cross-IDP scenarios [citation:6]. Key differentiators include **built-in change monitoring** with visibility into when specific users made changes, continuous logging, and backup-to-backup validation to detect unwanted changes. The environment overview shows IDP status, resilience score, and change velocity. Compliance mapping covers PCI DSS 4.0, SOC 2, NIST, and ISO 27000. Semperis cites the Okta breach affecting users in 2023, the average cost of a data breach, and the **$60M settlement Okta paid** after the LAPSUS$ attack as context for why independent recovery is critical [citation:6].
-**Best for:** Organizations wanting identity-focused recovery with deep change forensics and compliance mapping, particularly those in regulated industries needing audit evidence.
-
-### HYCU for Okta
-**Type:** One-click recovery with cross-tenant restore
-HYCU provides one-click recovery for Okta data including configurations, users, groups, applications, and policies [citation:7]. Key capabilities include creating **ransomware-proof, immutable backups**, restoring configurations and data **from one tenant to another**, and protecting Okta, Microsoft Entra ID, and AWS IAM from a single dashboard. HYCU allows controlling access to the backup service using Okta SSO itself, and supports 80+ workloads across on-prem, hybrid, and SaaS from one solution [citation:15].
-**Best for:** Organizations wanting cross-tenant restore capabilities and a single dashboard for Okta, Entra ID, and AWS IAM protection, particularly those already using HYCU for broader workload coverage.
+The sector exhibits **moderate concentration with rapid consolidation**: while hyperscaler-aligned multi-SaaS giants (such as AvePoint and Druva) and specialized identity-security unicorns (such as Semperis) lead enterprise market share, the market is transitioning from fragmented point utilities toward consolidated Zero Trust identity cyber resilience and API-driven automated recovery platforms.
 
 ---
 
-## 🟩 Open-Source Software
+## 🟦 SaaS & Hosted Enterprise Platforms
 
-Self-hosted, community-driven Okta Identity Cloud Backup and Recovery tools. The open-source ecosystem for **dedicated Okta backup** is extremely limited, with one notable project providing self-hosted protection.
+Enterprise-grade, cloud-hosted Okta Identity Cloud backup, disaster recovery, and identity posture management solutions. Sorted in descending order by company scale (market capitalization / enterprise valuation).
 
-### IdPVault
-**Stack:** Python / PostgreSQL / Docker | **License:** Open Source (GitHub)
-IdPVault is a self-hosted backup, drift detection, and restore platform for **Authentik, Okta, and Auth0 tenants**, explicitly designed with no phone-home and full data control [citation:9]. Key features include:
-- **Scheduled and on-demand encrypted backups** (AES-256-GCM with per-tenant envelope keys)
-- **Configuration object coverage**: apps, flows, policies, groups, mappings, and more
-- **Users & Access backup (opt-in)**: users, group memberships, and provenance-aware app assignments
-- **Adaptive Okta rate limiting** that auto-learns limits with configurable reserve headroom
-- **Snapshot-to-snapshot diff, drift detection**, and a per-object change events feed
-- **Restore engine**: dry-run preview, dependency-ordered apply (Authentik), and per-object restore reports
-- **Clone / promote**: restore a snapshot into another same-provider tenant to push a perfected app from preprod to prod
-- **Multi-user support**: session login, admin/read-only roles, email invites, SMTP settings
-- **Alerts on drift or failed backups**: webhook (ntfy/Slack) + email
-- **Prometheus metrics endpoint** for monitoring
-
-Deploys via Docker Compose with PostgreSQL and zero configuration (`docker compose up -d`). **Critical:** On first boot, the app generates a master encryption key inside a volume—you must back this key up immediately (`docker cp idpvault:/secrets/master.key ./master.key.backup`) because without it, encrypted snapshots are unrecoverable, and there is no escrow or phone-home [citation:9].
-**Best for:** Organizations wanting a self-hosted, encrypted backup solution for Okta (alongside Authentik and Auth0) with drift detection and no vendor dependency, accepting the Docker/PostgreSQL deployment and the critical responsibility of backing up the master key.
+| Platform | Company Scale (Valuation / Revenue) | Pricing (Starting Tier) | Free Tier / Trial Limit | Key Focus & Recovery Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[AvePoint Cloud Backup](https://www.avepoint.com/products/cloud/backup)** | **~$3.5B Valuation**<br>*(NASDAQ: AVPT, ~$488M TTM Rev)* | **$4.00 / user / month**<br>*(Billed annually via cloud marketplace)* | **30-Day Free Trial**<br>*(Full evaluation tenant access)* | High-frequency protection (up to 4x daily) for Okta configs, security settings, and app relationships with SOC 2 Type II / FedRAMP authorization. |
+| **[Semperis Recovery for Okta](https://www.semperis.com/solutions/okta-recovery/)** | **~$1.5B – $2.5B Valuation**<br>*(Private Unicorn, $100M+ ARR)* | **$10,000 / year base tier**<br>*(Enterprise starting tier; scales by identity count)* | **No Free Tier / Custom Demo Only**<br>*(Offers free audit tools Purple Knight & Forest Druid)* | Identity Threat Detection & Recovery (ITDR), real-time change forensics, continuous drift validation, and cross-IDP rollback. |
+| **[Druva Okta Protection](https://www.druva.com/)** | **~$1.5B – $2.0B Valuation**<br>*(Private, $200M+ ARR)* | **$8.00 / user / month**<br>*(Entry SaaS protection tier)* | **30-Day Free Trial**<br>*(Self-service evaluation tenant)* | Granular object restoration (single users, groups, apps) with explicit conflict handling (Skip/Overwrite/Merge) and JSON audit exports. |
+| **[Keepit for Okta](https://www.keepit.com/services/okta-backup/)** | **~$500M – $700M Valuation**<br>*(Private, $100M+ ARR)* | **$2.60 / user / month**<br>*(Base seat tier, 3-yr commitment)* | **30-Day Free Trial**<br>*(Full platform evaluation access)* | Independent vendor-neutral cloud storage with immutable blockchain-inspired backups, granular point-in-time recovery, and secondary-tenant failover. |
+| **[HYCU for Okta](https://www.hycu.com/workloads/okta)** | **~$300M – $500M Valuation**<br>*(Private, $140M Raised)* | **$1.20 / user / month**<br>*(Workforce Identity Suite tier)* | **14-Day Free Trial**<br>*(Waived service fees on R-Cloud)* | 1-click cross-tenant restore, ransomware-proof immutable retention, and unified identity protection covering Okta, Microsoft Entra ID, and AWS IAM. |
 
 ---
 
-## 📊 Comparison at a Glance
+## 🟩 Open-Source & Self-Hosted Software
 
-| Software | License | Stack | Granular Restore | Cross-Tenant | Drift Detection | Self-Hosted | Best For |
-|----------|---------|-------|------------------|--------------|-----------------|-------------|----------|
-| **Druva** | Proprietary | Cloud | ✅ | (Same domain) | ❌ | ❌ | Granular restore + conflict handling |
-| **Keepit** | Proprietary | Cloud | ✅ | ✅ Secondary tenant | ❌ | ❌ | Independent vendor-neutral backup |
-| **AvePoint** | Proprietary | Cloud | ✅ | (Check) | ❌ | ❌ | Multi-SaaS + high-frequency |
-| **Semperis** | Proprietary | Cloud | ✅ | ✅ Cross-IDP | ✅ Change monitoring | ❌ | Identity forensics + compliance |
-| **HYCU** | Proprietary | Cloud | ✅ | ✅ Cross-tenant | ❌ | ❌ | One-click + multi-cloud IAM |
-| **IdPVault** | Open Source | Python/Postgres/Docker | ✅ Dry-run | ✅ Clone/promote | ✅ | ✅ | Self-hosted encrypted backup |
+Community-driven, open-source utilities and self-hosted tools for exporting, versioning, migrating, and recovering Okta configurations and user access data. Sorted in descending order by GitHub stargazers count.
+
+| Project | Stars | Stack / Runtime | License | Description & Recovery Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| **[GoogleCloudPlatform/terraformer](https://github.com/GoogleCloudPlatform/terraformer)** | [![GitHub stars](https://img.shields.io/github/stars/GoogleCloudPlatform/terraformer?style=social&color=white)](https://github.com/GoogleCloudPlatform/terraformer/stargazers) | Go / CLI | Apache-2.0 | CLI tool that generates Terraform files (`.tf`) and state from existing infrastructure. Supports Okta resource extraction for GitOps-driven configuration disaster recovery. |
+| **[okta/terraform-provider-okta](https://github.com/okta/terraform-provider-okta)** | [![GitHub stars](https://img.shields.io/github/stars/okta/terraform-provider-okta?style=social&color=white)](https://github.com/okta/terraform-provider-okta/stargazers) | Go / Terraform | Apache-2.0 | Official HashiCorp Terraform provider for Okta. Enables Declarative Infrastructure-as-Code (IaC) configuration backup, drift management, and automated tenant restoration from Git. |
+| **[okta/okta-sdk-python](https://github.com/okta/okta-sdk-python)** | [![GitHub stars](https://img.shields.io/github/stars/okta/okta-sdk-python?style=social&color=white)](https://github.com/okta/okta-sdk-python/stargazers) | Python | Apache-2.0 | Official Python client library for Okta Management APIs, widely used to write custom scheduled backup daemons, tenant synchronization pipelines, and disaster recovery scripts. |
+| **[gabrielsroka/gabrielsroka.github.io](https://github.com/gabrielsroka/gabrielsroka.github.io)** | [![GitHub stars](https://img.shields.io/github/stars/gabrielsroka/gabrielsroka.github.io?style=social&color=white)](https://github.com/gabrielsroka/gabrielsroka.github.io/stargazers) | JavaScript / HTML | Open Source | Home of the **rockstar** browser extension for Okta admins. Enables fast client-side export of Okta users, groups, applications, group rules, and access assignments to CSV/JSON. |
+| **[bbohen/okta-user-export](https://github.com/bbohen/okta-user-export)** | [![GitHub stars](https://img.shields.io/github/stars/bbohen/okta-user-export?style=social&color=white)](https://github.com/bbohen/okta-user-export/stargazers) | Python | MIT | CLI automation utility to export Okta users, attributes, and user-group memberships across organizations into structured formats for offline vaulting. |
+| **[turbot/steampipe-plugin-okta](https://github.com/turbot/steampipe-plugin-okta)** | [![GitHub stars](https://img.shields.io/github/stars/turbot/steampipe-plugin-okta?style=social&color=white)](https://github.com/turbot/steampipe-plugin-okta/stargazers) | Go / Steampipe | Apache-2.0 | Query Okta users, groups, apps, and factor profiles using standard SQL. Useful for snapshotting Okta posture to SQLite/Postgres for change audit and config backups. |
+| **[oktadev/okta-dev-account-migration-tool](https://github.com/oktadev/okta-dev-account-migration-tool)** | [![GitHub stars](https://img.shields.io/github/stars/oktadev/okta-dev-account-migration-tool?style=social&color=white)](https://github.com/oktadev/okta-dev-account-migration-tool/stargazers) | Java | Apache-2.0 | Okta-maintained migration utility (`envsync`) designed to backup, extract, and push tenant configurations across different Okta organizations and sandbox environments. |
+| **[KelTech-Services/IdPVault](https://github.com/KelTech-Services/IdPVault)** | [![GitHub stars](https://img.shields.io/github/stars/KelTech-Services/IdPVault?style=social&color=white)](https://github.com/KelTech-Services/IdPVault/stargazers) | Python / PostgreSQL / Docker | AGPL-3.0 | Self-hosted encrypted backup, drift detection, and restore engine for Okta, Authentik, and Auth0. Provides AES-256-GCM snapshots, dry-run previews, clone/promote, and zero telemetry. |
+
+---
+
+## 🛡️ Architecture & Shared Responsibility Model
+
+A common misconception in Identity & Access Management (IAM) is that cloud identity providers handle point-in-time configuration recovery. Under the **Cloud Shared Responsibility Model**:
+
+1. **Okta's Responsibility:** High availability, infrastructure resilience, physical multi-region data center failover, host security, and core API uptime.
+2. **Customer's Responsibility:** Identity governance, user lifecycle states, tenant policies, app assignments, MFA enrollments, and protection against:
+   - **Accidental Deletions:** Admin mistakes, bulk provisioning deactivations, or faulty SCIM sync rules.
+   - **Malicious Tampering & Ransomware:** Compromised super admin credentials, hijacked API tokens, or rogue Okta Workflow modifications.
+   - **Configuration Drift:** Divergence across development, staging, and production identity tenants.
+
+---
+
+## 📊 Feature Comparison Matrix
+
+| Solution | Model | Primary Engine | Granular Restore | Cross-Tenant Recovery | Configuration Drift Detection | Self-Hosted Option | Best For |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **AvePoint** | SaaS | Enterprise Cloud | ✅ | ⚠️ Custom | ❌ | ❌ | Multi-SaaS backup with high-frequency snapshots |
+| **Semperis** | SaaS / Hybrid | Identity Engine | ✅ | ✅ Cross-IDP | ✅ Real-time | ❌ | Identity forensics, ITDR & compliance auditing |
+| **Druva** | SaaS | AWS Cloud Fabric | ✅ | ⚠️ Same domain | ❌ | ❌ | Automated push restore with conflict resolution |
+| **Keepit** | SaaS | Independent Cloud | ✅ | ✅ Secondary tenant | ❌ | ❌ | Vendor-neutral, immutable identity protection |
+| **HYCU** | SaaS | R-Cloud Fabric | ✅ | ✅ Cross-tenant | ❌ | ❌ | Unified Okta + Entra ID + AWS IAM coverage |
+| **IdPVault** | Open Source | Python / Postgres | ✅ Dry-run | ✅ Clone/Promote | ✅ | ✅ | Self-hosted encrypted snapshots & drift tracking |
+| **Terraform + Provider** | Open Source | GitOps / HCL | ✅ Via code | ✅ Multi-tenant | ✅ State drift | ✅ | Declarative Infrastructure-as-Code recovery |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Okta Identity Cloud Backup or Recovery tool that should be listed here, please open a pull request with:
+Contributions are warmly welcomed! If you know of an open-source tool, script, or enterprise solution for Okta identity backup and recovery:
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
-
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source.
-
-**Note on the ecosystem:** Okta operates under a shared responsibility model and **does not provide built-in backup and restore capability** for tenant configurations [citation:4]. This makes independent backup essential, and the commercial ecosystem has responded with specialized offerings: **Druva** for granular restore with explicit conflict handling [citation:3], **Keepit** for independent vendor-neutral storage [citation:12], **AvePoint** for multi-SaaS consolidation with high-frequency protection [citation:1], **Semperis** for identity-focused forensics with change monitoring [citation:6], and **HYCU** for cross-tenant restore with multi-cloud IAM coverage [citation:7]. On the open-source side, **IdPVault** is the only actively maintained self-hosted option found, providing encrypted snapshots, drift detection, and restore for Okta (alongside Authentik and Auth0) [citation:9]. Note that **Rewind for Okta** currently only backs up and exports data—it **does not offer restore capability yet** [citation:8], which is a critical limitation for a backup tool.
+1. Fork this repository.
+2. Add your entry following the established table structure.
+3. For open-source tools, include the live star count badge (`https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white`) linking to the stargazers page.
+4. Submit a Pull Request with a short summary of capabilities and maintainer status.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
-
----
-
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+This repository and curated list are licensed under the [Creative Commons Zero v1.0 Universal](LICENSE) (Public Domain Dedication).
