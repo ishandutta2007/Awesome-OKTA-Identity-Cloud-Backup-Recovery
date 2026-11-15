@@ -1,39 +1,51 @@
 # Awesome-OKTA-Identity-Cloud-Backup-Recovery
 
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Okta Identity Cloud Backup & Recovery Banner" width="100%">
+</p>
+
 # Awesome Okta Identity Cloud Backup & Recovery [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of top Okta Identity Cloud Backup and Disaster Recovery solutions — featuring enterprise SaaS/Hosted data protection platforms, Identity Threat Detection & Recovery (ITDR) suites, GitOps/Terraform state exporters, and self-hosted open-source backup tools for safeguarding Okta configurations, users, groups, rules, and security policies against ransomware, account takeovers, accidental deletions, and tenant misconfigurations.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://www.trackawesomelist.com/ishandutta2007/Awesome-OKTA-Identity-Cloud-Backup-Recovery/"><img src="https://www.trackawesomelist.com/badge.svg" alt="Track Awesome List" /></a>
+  <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-[![Track Awesome List](https://www.trackawesomelist.com/badge.svg)](https://www.trackawesomelist.com/ishandutta2007/Awesome-OKTA-Identity-Cloud-Backup-Recovery/)
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+> 🛡️ A curated list of top Okta Identity Cloud Backup and Disaster Recovery solutions — featuring enterprise SaaS/Hosted data protection platforms, Identity Threat Detection & Recovery (ITDR) suites, GitOps/Terraform state exporters, and self-hosted open-source backup tools for safeguarding Okta configurations, users, groups, rules, and security policies against ransomware, account takeovers, accidental deletions, and tenant misconfigurations.
+>
+> 🌟 **Star this repo if you find it helpful!** 🌟
 
 ---
 
 ## 📋 Table of Contents
 
-- [Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
-- [SaaS & Hosted Enterprise Platforms](#-saas--hosted-enterprise-platforms)
-- [Open-Source & Self-Hosted Software](#-open-source--self-hosted-software)
-- [Architecture & Shared Responsibility Model](#-architecture--shared-responsibility-model)
-- [Feature Comparison Matrix](#-feature-comparison-matrix)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [📈 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🟦 SaaS & Hosted Enterprise Platforms](#-saas--hosted-enterprise-platforms)
+- [🟩 Open-Source & Self-Hosted Software](#-open-source--self-hosted-software)
+- [🛡️ Architecture & Shared Responsibility Model](#️-architecture--shared-responsibility-model)
+- [📊 Feature Comparison Matrix](#-feature-comparison-matrix)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
 ## 📈 Sector Overview & Market Dynamics
 
-The global SaaS Data Protection & Recovery market is estimated at **$6.8B – $7.1B** (projected to reach **$18B+** by the early 2030s at an ~18% CAGR), while the adjacent Identity Threat Detection & Recovery (ITDR) market is valued at **$5.6B – $7.3B** expanding at 22%+ CAGR toward **$35B+**. 
+The global SaaS Data Protection & Recovery market is estimated at **$6.8B – $7.1B** (projected to reach **$18B+** by the early 2030s at an ~18% CAGR), while the adjacent Identity Threat Detection & Recovery (ITDR) market is valued at **$5.6B – $7.3B** expanding at 22%+ CAGR toward **$35B+**. 🌐
 
-The sector exhibits **moderate concentration with rapid consolidation**: while hyperscaler-aligned multi-SaaS giants (such as AvePoint and Druva) and specialized identity-security unicorns (such as Semperis) lead enterprise market share, the market is transitioning from fragmented point utilities toward consolidated Zero Trust identity cyber resilience and API-driven automated recovery platforms.
+The sector exhibits **moderate concentration with rapid consolidation**: while hyperscaler-aligned multi-SaaS giants (such as AvePoint and Druva) and specialized identity-security unicorns (such as Semperis) lead enterprise market share, the market is transitioning from fragmented point utilities toward consolidated Zero Trust identity cyber resilience and API-driven automated recovery platforms. 🚀
 
 ---
 
 ## 🟦 SaaS & Hosted Enterprise Platforms
 
-Enterprise-grade, cloud-hosted Okta Identity Cloud backup, disaster recovery, and identity posture management solutions. Sorted in descending order by company scale (market capitalization / enterprise valuation).
+Enterprise-grade, cloud-hosted Okta Identity Cloud backup, disaster recovery, and identity posture management solutions. Sorted in descending order by company scale (market capitalization / enterprise valuation). 🏢
 
-| Platform | Company Scale (Valuation / Revenue) | Pricing (Starting Tier) | Free Tier / Trial Limit | Key Focus & Recovery Capabilities |
+| Platform 🏢 | Company Scale (Valuation / Revenue) 💰 | Pricing (Starting Tier) 🏷️ | Free Tier / Trial Limit ⏳ | Key Focus & Recovery Capabilities ⚡ |
 | :--- | :--- | :--- | :--- | :--- |
 | **[AvePoint Cloud Backup](https://www.avepoint.com/products/cloud/backup)** | **~$3.5B Valuation**<br>*(NASDAQ: AVPT, ~$488M TTM Rev)* | **$4.00 / user / month**<br>*(Billed annually via cloud marketplace)* | **30-Day Free Trial**<br>*(Full evaluation tenant access)* | High-frequency protection (up to 4x daily) for Okta configs, security settings, and app relationships with SOC 2 Type II / FedRAMP authorization. |
 | **[Semperis Recovery for Okta](https://www.semperis.com/solutions/okta-recovery/)** | **~$1.5B – $2.5B Valuation**<br>*(Private Unicorn, $100M+ ARR)* | **$10,000 / year base tier**<br>*(Enterprise starting tier; scales by identity count)* | **No Free Tier / Custom Demo Only**<br>*(Offers free audit tools Purple Knight & Forest Druid)* | Identity Threat Detection & Recovery (ITDR), real-time change forensics, continuous drift validation, and cross-IDP rollback. |
@@ -45,9 +57,9 @@ Enterprise-grade, cloud-hosted Okta Identity Cloud backup, disaster recovery, an
 
 ## 🟩 Open-Source & Self-Hosted Software
 
-Community-driven, open-source utilities and self-hosted tools for exporting, versioning, migrating, and recovering Okta configurations and user access data. Sorted in descending order by GitHub stargazers count.
+Community-driven, open-source utilities and self-hosted tools for exporting, versioning, migrating, and recovering Okta configurations and user access data. Sorted in descending order by GitHub stargazers count. 💻
 
-| Project | Stars | Stack / Runtime | License | Description & Recovery Use Case |
+| Project 🛠️ | Stars ⭐ | Stack / Runtime ⚙️ | License 📜 | Description & Recovery Use Case 🔍 |
 | :--- | :--- | :--- | :--- | :--- |
 | **[GoogleCloudPlatform/terraformer](https://github.com/GoogleCloudPlatform/terraformer)** | [![GitHub stars](https://img.shields.io/github/stars/GoogleCloudPlatform/terraformer?style=social&color=white)](https://github.com/GoogleCloudPlatform/terraformer/stargazers) | Go / CLI | Apache-2.0 | CLI tool that generates Terraform files (`.tf`) and state from existing infrastructure. Supports Okta resource extraction for GitOps-driven configuration disaster recovery. |
 | **[okta/terraform-provider-okta](https://github.com/okta/terraform-provider-okta)** | [![GitHub stars](https://img.shields.io/github/stars/okta/terraform-provider-okta?style=social&color=white)](https://github.com/okta/terraform-provider-okta/stargazers) | Go / Terraform | Apache-2.0 | Official HashiCorp Terraform provider for Okta. Enables Declarative Infrastructure-as-Code (IaC) configuration backup, drift management, and automated tenant restoration from Git. |
@@ -62,19 +74,19 @@ Community-driven, open-source utilities and self-hosted tools for exporting, ver
 
 ## 🛡️ Architecture & Shared Responsibility Model
 
-A common misconception in Identity & Access Management (IAM) is that cloud identity providers handle point-in-time configuration recovery. Under the **Cloud Shared Responsibility Model**:
+A common misconception in Identity & Access Management (IAM) is that cloud identity providers handle point-in-time configuration recovery. Under the **Cloud Shared Responsibility Model**: ⚖️
 
-1. **Okta's Responsibility:** High availability, infrastructure resilience, physical multi-region data center failover, host security, and core API uptime.
-2. **Customer's Responsibility:** Identity governance, user lifecycle states, tenant policies, app assignments, MFA enrollments, and protection against:
-   - **Accidental Deletions:** Admin mistakes, bulk provisioning deactivations, or faulty SCIM sync rules.
-   - **Malicious Tampering & Ransomware:** Compromised super admin credentials, hijacked API tokens, or rogue Okta Workflow modifications.
-   - **Configuration Drift:** Divergence across development, staging, and production identity tenants.
+1. **Okta's Responsibility:** High availability, infrastructure resilience, physical multi-region data center failover, host security, and core API uptime. ☁️
+2. **Customer's Responsibility:** Identity governance, user lifecycle states, tenant policies, app assignments, MFA enrollments, and protection against: 🔐
+   - **Accidental Deletions:** Admin mistakes, bulk provisioning deactivations, or faulty SCIM sync rules. ⚠️
+   - **Malicious Tampering & Ransomware:** Compromised super admin credentials, hijacked API tokens, or rogue Okta Workflow modifications. 🚨
+   - **Configuration Drift:** Divergence across development, staging, and production identity tenants. 🔄
 
 ---
 
 ## 📊 Feature Comparison Matrix
 
-| Solution | Model | Primary Engine | Granular Restore | Cross-Tenant Recovery | Configuration Drift Detection | Self-Hosted Option | Best For |
+| Solution 🛠️ | Model 🌐 | Primary Engine ⚙️ | Granular Restore 🎯 | Cross-Tenant Recovery 🔄 | Configuration Drift Detection 📡 | Self-Hosted Option 🏠 | Best For 🏆 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **AvePoint** | SaaS | Enterprise Cloud | ✅ | ⚠️ Custom | ❌ | ❌ | Multi-SaaS backup with high-frequency snapshots |
 | **Semperis** | SaaS / Hybrid | Identity Engine | ✅ | ✅ Cross-IDP | ✅ Real-time | ❌ | Identity forensics, ITDR & compliance auditing |
@@ -86,17 +98,35 @@ A common misconception in Identity & Access Management (IAM) is that cloud ident
 
 ---
 
+## 💖 Support & Sponsorship
+
+Thank you for exploring and utilizing this curated directory! 🌟 
+
+If you find this repository valuable for your organization, cloud security posture, or identity backup workflows:
+- ⭐ **Star this repository** to show your appreciation and help other engineers discover it.
+- 🍴 **Fork the repo** to contribute new solutions or customize it for your internal team's IAM guidelines.
+- 📢 **Share it** on LinkedIn, X/Twitter, Discord, or Reddit with fellow DevOps, SecOps, and Identity engineers.
+- ☕ **Support the maintainer:** If you'd like to fuel ongoing maintenance, curation, and research, consider buying a coffee via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-OKTA-Identity-Cloud-Backup-Recovery&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-OKTA-Identity-Cloud-Backup-Recovery&type=date&legend=top-left)
+
+---
+
 ## 🤝 Contributing
 
-Contributions are warmly welcomed! If you know of an open-source tool, script, or enterprise solution for Okta identity backup and recovery:
+Contributions are warmly welcomed! 🤝 If you know of an open-source tool, script, or enterprise solution for Okta identity backup and recovery:
 
-1. Fork this repository.
-2. Add your entry following the established table structure.
-3. For open-source tools, include the live star count badge (`https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white`) linking to the stargazers page.
-4. Submit a Pull Request with a short summary of capabilities and maintainer status.
+1. Fork this repository. 🍴
+2. Add your entry following the established table structure. 📝
+3. For open-source tools, include the live star count badge (`https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white`) linking to the stargazers page. ⭐
+4. Submit a Pull Request with a short summary of capabilities and maintainer status. 🚀
 
 ---
 
 ## 📄 License
 
-This repository and curated list are licensed under the [Creative Commons Zero v1.0 Universal](LICENSE) (Public Domain Dedication).
+This repository and curated list are licensed under the [Creative Commons Zero v1.0 Universal](LICENSE) (Public Domain Dedication). ⚖️
